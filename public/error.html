@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Error</title>
+</head>
+<body>
+  <h1>Email Verification Failed</h1>
+  <p id="error-message">An unknown error occurred during email verification.</p>
+  <a href="/">Try again</a>
+
+  <script>
+    // Fetch the error message dynamically (if provided)
+    const urlParams = new URLSearchParams(window.location.search);
+    const errorMessage = urlParams.get("error") || "An unknown error occurred during email verification.";
+    document.getElementById("error-message").innerText = errorMessage;
+  </script>
+</body>
+</html>
